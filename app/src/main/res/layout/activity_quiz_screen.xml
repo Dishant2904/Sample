@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Quiz_Screen"
+    android:background="@drawable/home_color"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp">
+        <ImageView
+            android:id="@+id/life1_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/heart_vector_yellow" />
+
+        <ImageView
+            android:id="@+id/life2_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/heart_vector_yellow" />
+
+        <ImageView
+            android:id="@+id/life3_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/heart_vector_yellow" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="end"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/hint_information_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_info_24" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+        <EditText
+            android:id="@+id/Edittext_main_answr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:padding="10dp"
+            android:letterSpacing="0.5"
+            android:textStyle="bold"
+            android:alpha="0.8"
+            android:textColor="@color/white"
+            android:background="@drawable/edittext_main_answr"
+            android:textSize="40dp"
+            android:text="CHAIR"/>
+        <GridView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:numColumns="4"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:id="@+id/gridview_letter"
+
+            />
+</LinearLayout>
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="15dp"
+        android:text="Reset"
+        android:textSize="20dp"
+        app:cornerRadius="20dp"
+        app:strokeColor="#7DF9FF"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/check_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="15dp"
+
+        android:paddingEnd="30dp"
+        android:paddingBottom="15dp"
+        android:text="Check"
+        android:textSize="20dp"
+        app:cornerRadius="20dp"
+        app:strokeColor="#7DF9FF"
+        app:strokeWidth="3dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
