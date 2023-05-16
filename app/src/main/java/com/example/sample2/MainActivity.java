@@ -34,30 +34,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SharedPreferences sharedPreferences = getSharedPreferences("Score", Context.MODE_PRIVATE);
-        if(sharedPreferences.contains("high_score")){
-            homeScore = sharedPreferences.getInt("high_score", 0);
-        }
-        TextView textView=(TextView) findViewById(R.id.highest_score_textview);
         LinearLayout linearLayout1=(LinearLayout)findViewById(R.id.linearlayout_high);
-        if(homeScore==0){
-            linearLayout1.setVisibility(View.GONE);
-        } else if (homeScore!=0) {
-            linearLayout1.setVisibility(View.VISIBLE);
-            textView.setText(String.valueOf(homeScore));
-        }
         Button start=(Button) findViewById(R.id.start_home);
 
         EditText word_box=(EditText) findViewById(R.id.edittext_word);
         EditText clue_box=(EditText) findViewById(R.id.edittext_clue);
-        ImageView setting=(ImageView) findViewById(R.id.setting_main);
-        setting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1=new Intent(MainActivity.this,Setting_activity.class);
-                startActivity(intent1);
-            }
-        });
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
